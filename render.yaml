@@ -1,0 +1,29 @@
+name: yomovie_scapper
+version: 1.0.0
+
+summary: for testing purpose only
+
+description: a scrapper for yomovie website
+
+# Define the build environment
+build:
+  image: python:3.8
+  commands:
+    - pip install -r requirements.txt
+
+# Define the runtime environment
+runtime:
+  image: python:3.8
+  commands:
+    - python yomovie_api.py
+
+# Define the environment variables
+env:
+  - name: PORT
+    value: 8080
+
+# Define the routes
+routes:
+  - type: http
+    path: /
+    port: 8080
