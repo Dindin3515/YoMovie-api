@@ -20,10 +20,10 @@ runtime:
 # Define the environment variables
 env:
   - name: PORT
-    value: 8080
+    value: 0.0.0.0
 
 # Define the routes
 routes:
   - type: http
     path: /
-    port: 8080
+    port: 0.0.0.0
